@@ -6,7 +6,7 @@ This is a sample template for lambda-go-boilerplate - Below is a brief explanati
 .
 ├── Makefile                    <-- Make to automate build
 ├── README.md                   <-- This instructions file
-├── hello-world                 <-- Source code for a lambda function
+├── app                         <-- Source code for a lambda function
 │   ├── main.go                 <-- Lambda function code
 │   └── main_test.go            <-- Unit tests
 └── template.yaml
@@ -63,7 +63,7 @@ AWS Lambda Golang runtime requires a flat folder with the executable generated o
     FirstFunction:
         Type: AWS::Serverless::Function
         Properties:
-            CodeUri: hello_world/
+            CodeUri: app/
             ...
 ```
 
@@ -88,7 +88,7 @@ You can find your API Gateway Endpoint URL in the output values displayed after 
 We use `testing` package that is built-in in Golang and you can simply run the following command to run our tests:
 
 ```shell
-cd ./hello-world/
+cd ./app/
 go test -v .
 ```
 # Appendix
